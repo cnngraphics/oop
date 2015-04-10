@@ -45,7 +45,7 @@ class Animal{
 		$this->age=$age;
 	}
 
-	//setters*************
+	//setters
 	function getName(){
 		return $this->name;
 	}
