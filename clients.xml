@@ -1,0 +1,11 @@
+<clients>
+	<client>
+		<name>John</name>
+		<account_number>87234838</account_number>
+	</client>
+
+	<client>
+		<name>Jane</name>
+		<account_number>1975305629299</account_number>
+	</client>
+</clients>
