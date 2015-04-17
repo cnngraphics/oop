@@ -1,0 +1,55 @@
+<?php
+
+Echo $str1 = "[10:26:36 AM] Ram...: ok
+[10:29:08 AM] Theo Marcellus: did you see the image?
+[10:29:18 AM] Ram...: Yes
+[10:29:44 AM] Theo Marcellus: so you see, we have to do calculations and show the results of the calculations:
+[10:30:14 AM] Ram...: bar chart to show the discovered or paid?";
+echo "<br>";
+echo "<br>";
+
+$first = strpos($str1,'[');
+$second = strpos($str1,']');
+echo 'First bracket is in position: '.$first;echo "<br>";echo 'Second bracket is in position: '.$second;echo "<br>";
+
+//now let's return the fragment between $first and $second
+
+$ret = substr($str1,$first,$second+1);
+echo $ret;
+echo "<br>";
+
+// now lets remove that fragment from the original string with str_replace echo str_replace("needel","replaement","Haystack");
+$clean = str_replace($ret, "", $str1);
+
+echo $clean;
+
+echo "<br>";
+echo "<br>";
+
+///in one shot one line of code does it all
+ $round1 =  str_replace(substr($str1, strpos($str1,'['), strpos($str1,']')+1),"",$str1);
+ echo $round1;
+echo "<br>";
+echo "<br>";
+ $round2 =  str_replace(substr($round1, strpos($round1,'['), strpos($round1,']')+1)," ",$round1);
+echo $round2;
+
+echo "<br>";
+echo "<br>";
+$round3 = str_replace(substr($round2, strpos($round2,'['), strpos($round2,']')+1)," ",$round2);
+echo $round3;
+
+
+//  $str_replace=substr($str,strpos($str,'['), strpos(substr($str,strpos($str,']')),'3')+1);
+// // //.................return..str...start..............,length
+
+// $str='hello 123 hello';
+// $str_replace=substr($str,strpos($str,'1'),strpos(substr($str,strpos($str,'1')),'3')+1);
+// $str=str_replace($str_replace,'',$str);
+// echo $str;
+
+//substr returns part of string from start to length
+
+// $s ="Hello World";
+
+// echo substr($s,"l",3);
